@@ -47,4 +47,4 @@ while getopts "n:i:p:h" opt; do
   esac
 done
 
-# Add Check for both IP and PORT and if both are legal run Nmap scan, Gobuster dir + dns as a starter.
+# Add Check for both IP and PORT and if both are legal run Nmap scan, Gobuster dir + dns as a starter, find more stuff to automate.
