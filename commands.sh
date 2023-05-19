@@ -48,3 +48,4 @@ while getopts "n:i:p:h" opt; do
 done
 
 # Add Check for both IP and PORT and if both are legal run Nmap scan, Gobuster dir + dns as a starter.
+# Testing
