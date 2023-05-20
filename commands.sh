@@ -2,7 +2,18 @@
 
 IP=0
 PORT=0
-
+WORDLIST=0
+findwordlist()
+{
+  # TODO: add search from root
+  PATH=/foo/bar
+  if [ -f $PATH ]; then
+    WORDLIST=$PATH
+    echo "File Found"
+    return 
+  fi
+  echo "File not Found"
+}
 
 help()
 {
@@ -47,5 +58,9 @@ while getopts "n:i:p:h" opt; do
   esac
 done
 
-# Add Check for both IP and PORT and if both are legal run Nmap scan, Gobuster dir + dns as a starter.
-# Testing
+# ! Check that everything works correctly
+
+findwordlist
+nmap IP &
+gobuster -u $IP -w $WORDLIST
+
